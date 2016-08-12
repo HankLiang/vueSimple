@@ -1,0 +1,46 @@
+@import '../../styles/mixin.less';
+
+#contect {
+  .font-size(14px);
+
+  .introduce {
+    padding: 0.4rem;
+    line-height: 1.5;
+  }
+
+  .contact-way {
+    .title {
+      .font-size(17px);
+      font-weight: bold;
+    }
+
+    .qrcode {
+      .background-image('../images/HkQrcode.jpg');
+      height: 3.333333rem;
+      background-size: 2.666667rem 2.666667rem;
+      background-position: center center;
+    }
+
+    .email {
+      .font-size(16px);
+      color: #222;
+      margin-bottom: 0.133333rem;
+    }
+
+    .github {
+      i {
+        .background-image('../images/github.png');
+        .size(0.66rem, 0.66rem);
+        border-radius: 50%;
+        display: inline-block;
+        background-size: cover;
+      }
+
+      a {
+        .font-size(16px);
+        margin-left: 0.133333rem;
+        color: #2CBBAB;
+      }
+    }
+  }
+}
