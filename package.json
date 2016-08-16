@@ -1,5 +1,5 @@
 {
-  "name": "geter",
+  "name": "vueSimple",
   "version": "1.0.0",
   "description": "guidebook ",
   "main": "index.js",
@@ -44,7 +44,7 @@
     "webpack-dev-server": "1.12.0"
   },
   "cdn": {
-    "dir": "/",
+    "dir": "/geter/",
     "dev": {
       "domain": "obmg60kuy.bkt.clouddn.com",
       "config": {

@@ -69,13 +69,13 @@ export default {
     const newPuzzles = this.puzzles.slice(0, 15)
     const isPass = newPuzzles.every((e, i) => e === i + 1)
     if (isPass) {
-      alert ('恭喜，闯关成功！')
+      window.alert('恭喜，闯关成功！')
     }
     }
   }
   },
   ready () {
-  this.render()
+    this.render()
   }
 }
 </script>
