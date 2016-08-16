@@ -45,6 +45,10 @@ export default {
           router: 'activities'
         },
         {
+          name: '小游戏',
+          router: 'game'
+        },
+        {
           name: '我的信息',
           router: 'profile'
         }

@@ -34,5 +34,11 @@ module.exports = {
     component (resolve) {
       require(['./pages/signin/signin.vue'], resolve)
     }
+  },
+  '/game': {
+    name: 'game',
+    component (resolve) {
+      require(['./pages/game/game.vue'], resolve)
+    }
   }
 }

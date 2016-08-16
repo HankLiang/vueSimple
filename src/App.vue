@@ -1,5 +1,5 @@
 <template>
-  <div class="body">
+  <div class="body clearfix">
     <router-view></router-view>
   </div>
   <hk-footer></hk-footer>
