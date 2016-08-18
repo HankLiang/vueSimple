@@ -58,8 +58,14 @@ module.exports = {
   devtool: '#source-map'
 }
 
-if (process.env.NODE_ENV === 'develop') {
-  module.exports.output.publicPath = '//' + pkg.cdn.dev.domain + pkg.cdn.dir;
+if (process.env.NODE_ENV === 'qiniu' || process.env.NODE_ENV === 'local') {
+  if (process.env.NODE_ENV === 'qiniu') {
+    module.exports.output.publicPath = '//' + pkg.cdn.qiniu.domain + pkg.cdn.dir;
+  }
+
+  if (process.env.NODE_ENV === 'local') {
+    module.exports.output.publicPath = './';
+  }
 
   module.exports.plugins = (module.exports.plugins || []).concat([
     new HtmlWebpackPlugin({

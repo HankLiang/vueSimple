@@ -5,7 +5,7 @@ var pkg = JSON.parse(fs.readFileSync('./package.json'));
 
 gulp.task('dev', function() {
   return gulp.src('./dist/**')
-    .pipe(qiniu(pkg.cdn.dev.config, {
+    .pipe(qiniu(pkg.cdn.qiniu.config, {
       dir: pkg.cdn.dir
     }));
 })

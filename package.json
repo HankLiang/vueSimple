@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --hot --host 192.168.222.71",
-    "build": "cross-env NODE_ENV=develop webpack --progress --hide-modules",
-    "local": "cross-env NODE_ENV=develop webpack --progress --hide-modules && gulp dev"
+    "local": "cross-env NODE_ENV=local webpack --progress --hide-modules",
+    "qiniu": "cross-env NODE_ENV=qiniu webpack --progress --hide-modules && gulp dev"
   },
   "dependencies": {
     "autosize": "3.0.15",
@@ -45,7 +45,7 @@
   },
   "cdn": {
     "dir": "/geter/",
-    "dev": {
+    "qiniu": {
       "domain": "obmg60kuy.bkt.clouddn.com",
       "config": {
         "accessKey": "iNx3K9rij8zp4O4vK7BIqeQv5PrLMwuekNY2KJ9F",
