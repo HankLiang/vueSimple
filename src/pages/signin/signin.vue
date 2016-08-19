@@ -64,7 +64,8 @@ export default {
       const updateProperty = this.$resource('/asiainfo_weixin/login/register')
       this.canSubmit = false
       updateProperty.save(params).then(() => {
-         showToast('注册成功')
+        showToast('注册成功')
+        this.canSubmit = true
       }, () => {
         showToast('注册失败')
         this.canSubmit = true
