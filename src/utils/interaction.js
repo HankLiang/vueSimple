@@ -94,7 +94,34 @@ const loadMore = (callback, wait = 100) => {
   }, wait)
 }
 
+// param of style is a string. for example, it should be like 'color: red; top: 10rem;'
+const showToast = (message, time, style) => {
+  const DEFAULT_TIME = 2000
+  const $body = document.getElementsByTagName('body')[0]
+  const $toastDom = document.getElementsByClassName('toast')
+
+  if ($toastDom.length > 0) {
+    $toastDom[0].getElementsByClassName('text-wrapper')[0].textContent = message
+  } else {
+    // format toast html
+    const $toast = document.createElement('div')
+    const $text = document.createElement('div')
+    $toast.setAttribute('class', 'toast')
+    $text.setAttribute('class', 'text-wrapper')
+    $text.textContent = message
+    $toast.appendChild($text)
+    if (style) $toast.style.cssText = style
+    $body.appendChild($toast)
+
+    setTimeout(() => {
+      $body.removeChild($toastDom[0])
+    }, time || DEFAULT_TIME)
+  }
+}
+
+
 module.exports = {
   setDocumentTitle: setDocumentTitle,
-  loadMore: loadMore
+  loadMore: loadMore,
+  showToast: showToast
 }

@@ -8,6 +8,7 @@
 <style lang="less">
 @import '../src/styles/reset';
 @import '../src/styles/mixin';
+@import '../src/styles/util';
 
 .body {
   height: 100%;
