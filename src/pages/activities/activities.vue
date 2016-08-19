@@ -1,18 +1,41 @@
 <template>
   <div id="activities">
-    {{activities}}
+    {{name}} </br>
+    {{password}}
   </div>
 </template>
 
 <script>
 import {setDocumentTitle} from '../../utils/interaction'
 
+const callApiDemo = (vm) => {
+  const resource = vm.$resource('/asiainfo_weixin/login/login')
+  return resource.get().then((resp) => {
+    window.alert('success')
+    const data = resp.data
+    return {
+      name: data.name,
+      password: data.password
+    }
+  }, (error) =>{
+    window.alert('error')
+    const message = JSON.parse(error.data.message)
+    window.alert(message)
+  })
+}
+
 export default {
   data () {
     this.query = this.$route.query
     this.params = this.$route.params
+
     return {
       activities: 'activities'
+    }
+  },
+  route: {
+    data (transition) {
+      return callApiDemo(this)
     }
   },
   ready () {

@@ -1,5 +1,5 @@
 <template>
-  <div class="body clearfix">
+  <div class="body">
     <router-view></router-view>
   </div>
   <hk-footer></hk-footer>
@@ -8,6 +8,10 @@
 <style lang="less">
 @import '../src/styles/reset';
 @import '../src/styles/mixin';
+
+.body {
+  height: 100%;
+}
 </style>
 
 <script>

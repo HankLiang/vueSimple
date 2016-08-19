@@ -86,13 +86,13 @@ body {
   font-family: Arial, "Microsoft YaHei";
 }
 .box {
-  width: 400px;
-  margin: 50px auto 0;
+  width: 5.333333rem;
+  margin: 1.333333rem auto;
 }
 .puzzle-wrap {
-  width: 400px;
-  height: 400px;
-  margin-bottom: 40px;
+  width: 5.333333rem;
+  height: 5.333333rem;
+  margin-bottom: 0.533333rem;
   padding: 0;
   background: #ccc;
   list-style: none;
@@ -100,11 +100,11 @@ body {
 .puzzle {
   .font-size(16px);
   float: left;
-  width: 100px;
-  height: 100px;
+  width: 1.333333rem;
+  height: 1.333333rem;
   background: #f90;
   text-align: center;
-  line-height: 100px;
+  line-height: 1.333333rem;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 4px;
   text-shadow: 1px 1px 1px #B9B4B4;
@@ -120,8 +120,8 @@ body {
   border-bottom: 1px solid #ccc;
   color: #6f6f6f;
   background: #f90;
-  padding: 15px 10px;
-  border-radius: 10px;
+  padding: 0.2rem 0.133333rem;
+  border-radius: 20px;
   text-decoration: none;
 }
 
