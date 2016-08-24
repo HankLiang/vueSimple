@@ -6,21 +6,19 @@
 </template>
 
 <script>
-import {setDocumentTitle} from '../../utils/interaction'
+import {setDocumentTitle, showToast} from '../../utils/interaction'
 
 const callApiDemo = (vm) => {
   const resource = vm.$resource('/asiainfo_weixin/login/login')
   return resource.get().then((resp) => {
-    window.alert('success')
     const data = resp.data
     return {
       name: data.name,
       password: data.password
     }
   }, (error) =>{
-    window.alert('error')
     const message = JSON.parse(error.data.message)
-    window.alert(message)
+    showToast(message)
   })
 }
 

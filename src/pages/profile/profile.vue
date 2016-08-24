@@ -3,16 +3,37 @@
     <div class="header">
       <div class="info centered">
         <img class="avatar" :src="avatar">
-        <div>{{name}}</div>
       </div>
-
+      <div class="centered">
+        <h2>Information</h2>
+        <div>flag: {{flag}}</div>
+        <div>name: {{name}}</div>
+        <div>email: {{email}}</div>
+        <div>tel: {{email}}</div>
+      </div>
       <div class="sign" v-link="{ name: 'signin'}">注册</div>
     </div>
   </div>
 </template>
 
 <script>
-import {setDocumentTitle} from '../../utils/interaction'
+import {setDocumentTitle, showToast} from '../../utils/interaction'
+
+const getInfo = (vm) => {
+  const resource = vm.$resource('/asiainfo_weixin/login/getInfo.jhtml')
+  return resource.get().then((resp) => {
+    const data = resp.data
+    return {
+      flag: data.flag,
+      name: data.user.name,
+      tel: data.user.tel,
+      email: data.user.email
+    }
+  }, (error) =>{
+    const message = JSON.parse(error.data.message)
+    showToast(message)
+  })
+}
 
 export default {
   data () {
@@ -20,8 +41,13 @@ export default {
     this.params = this.$route.params
 
     return {
-      name: 'Hank shuaiguo',
+      name: '',
       avatar: 'https://o5wtsnvqp.qnssl.com/9798a7d2fed617e072ee94d6.jpg'
+    }
+  },
+  route: {
+    data (transition) {
+      return getInfo(this)
     }
   },
   methods: {
