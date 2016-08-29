@@ -1,3 +1,47 @@
+@import '../../styles/mixin.less';
+
 #activities {
-  color: #555;
+  padding: 0.266667rem;
+
+  section {
+    h3 {
+      .font-size(16px);
+      color: #000;
+      font-weight: bold;
+      margin: 0.3rem 0;
+    }
+
+    article {
+      p {
+        line-height: 1.5;
+        .font-size(14px);
+        color: #555;
+      }
+    }
+  }
+
+
+  .pic1 {
+    .background-image('../images/1.png');
+    display: inline-block;
+    width: 2.5rem;
+    height: 5.0rem;
+    margin-bottom: 0.266667rem;
+  }
+
+  .pic2 {
+    .background-image('../images/2.png');
+    display: inline-block;
+    width: 2.5rem;
+    height: 5.0rem;
+    margin-bottom: 0.266667rem;
+  }
+
+  .pic3 {
+    .background-image('../images/3.png');
+    display: inline-block;
+    width: 2.5rem;
+    height: 5.0rem;
+    margin-bottom: 0.266667rem;
+  }
 }

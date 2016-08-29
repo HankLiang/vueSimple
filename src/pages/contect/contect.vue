@@ -1,5 +1,6 @@
 <template>
   <div id="contect">
+    <h1>扬帆工作室</h1>
     <div class="introduce">
       我们是一群充满活力的90后! <br/>
       我们是一群喜欢编程的程序猿! <br/>
@@ -8,6 +9,7 @@
     <div class="contact-way">
       <div class="title centered">联系我</div>
       <div class="qrcode"> </div>
+      <a href="tel://13262275630">Telephone</a>
       <div class="email centered">Email: ly604547351@163.com</div>
       <div class="github centered"><i></i><a href="https://github.com/HankLiang">GitHub</a></div>
     </div>
@@ -27,7 +29,6 @@ export default {
   },
 
   ready () {
-    setDocumentTitle('contect')
   }
 }
 </script>

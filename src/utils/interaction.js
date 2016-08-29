@@ -119,9 +119,26 @@ const showToast = (message, time, style) => {
   }
 }
 
+const isEmail = (str) => {
+  const eml = /^[A-Za-z0-9\._-]+@[A-Za-z0-9_-]+([\.][A-Za-z0-9-]+)+$/
+  return eml.test(str)
+}
+
+const isTel = (str) => {
+  const telRegs = ['^0?1[0-9]{10}$', '^09[0-9]{8}$', '^\\d{8}$', '^853[0-9]{8}$']
+  for (const reg of telRegs) {
+    let re = new RegExp(reg)
+    if (re.test(str)) {
+      return true
+    }
+  }
+  return false
+}
 
 module.exports = {
   setDocumentTitle: setDocumentTitle,
   loadMore: loadMore,
-  showToast: showToast
+  showToast: showToast,
+  isEmail: isEmail,
+  isTel: isTel
 }

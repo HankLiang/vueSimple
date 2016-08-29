@@ -1,8 +1,8 @@
 module.exports = {
   '/': {
-    name: 'home',
+    name: 'contect',
     component (resolve) {
-      require(['./pages/home/home.vue'], resolve)
+      require(['./pages/contect/contect.vue'], resolve)
     }
   },
   '/orders': {

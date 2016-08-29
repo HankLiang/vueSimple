@@ -41,7 +41,7 @@ export default {
           router: 'contect'
         },
         {
-          name: '活动页面',
+          name: '介绍',
           router: 'activities'
         },
         {
@@ -49,7 +49,7 @@ export default {
           router: 'game'
         },
         {
-          name: '我的信息',
+          name: '我的',
           router: 'profile'
         }
       ]

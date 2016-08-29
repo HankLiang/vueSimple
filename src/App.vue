@@ -10,9 +10,14 @@
 @import '../src/styles/mixin';
 @import '../src/styles/util';
 
-.body {
-  height: 100%;
+body {
+  position: relative;
 }
+
+.body {
+  padding-bottom: 1.333333rem;
+}
+
 </style>
 
 <script>

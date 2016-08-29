@@ -17,7 +17,6 @@ export default {
     }
   },
   ready () {
-    setDocumentTitle('orders')
   }
 }
 </script>

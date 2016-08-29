@@ -1,7 +1,6 @@
 <template>
   <div id="home">
     {{home}}
-    <p> lalalalala</p>
   </div>
 </template>
 

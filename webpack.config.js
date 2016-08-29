@@ -55,7 +55,7 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  devtool: '#source-map'
+  devtool: '#eval-source-map'
 }
 
 if (process.env.NODE_ENV === 'qiniu' || process.env.NODE_ENV === 'local') {

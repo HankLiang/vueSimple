@@ -117,11 +117,11 @@ body {
 
 .btn {
   .font-size(20px);
-  border-bottom: 1px solid #ccc;
+  border: 2px solid #ccc;
   color: #6f6f6f;
   background: #f90;
   padding: 0.2rem 0.133333rem;
-  border-radius: 20px;
+  border-radius: 18px;
   text-decoration: none;
 }
 
